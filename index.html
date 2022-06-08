@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <link rel="icon" href="images/common/logo.ico" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no" />
+    <!-- 禁止横屏 -->
+    <meta name="screen-orientation" content="portrait" />
+    <title>book</title>
+  </head>
+
+  <body>
+    <script>
+      window.global = window
+    </script>
+    <script type="module">
+      import process from 'process'
+      import { Buffer } from 'buffer'
+      import EventEmitter from 'events'
+
+      window.Buffer = Buffer
+      window.process = process
+      window.EventEmitter = EventEmitter
+    </script>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+    <script type="module" src="/js/bignumber.js"></script>
+
+    <!-- <script src="/js/fingerprint.js"></script>
+    <script >
+      (async () => {
+        // Get the visitor identifier when you need it.
+        const fp = await fpPromise
+        const result = await fp.get()
+
+        // This is the visitor identifier:
+        const visitorId = result.visitorId
+        console.log(visitorId)
+      })()
+    </script> -->
+    <!-- <script src="https://cdn.bootcss.com/vConsole/3.3.4/vconsole.min.js"></script>
+    <script>
+      window.onload = function () {
+        var vConsole = new VConsole()
+        console.log('Hello world')
+      }
+    </script> -->
+  </body>
+</html>
